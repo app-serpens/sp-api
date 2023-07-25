@@ -1,6 +1,7 @@
 package com.serpens.spapi.domain.models;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -11,6 +12,7 @@ import java.util.UUID;
 
 @MappedSuperclass
 @EqualsAndHashCode
+@Data
 public abstract class BaseModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
