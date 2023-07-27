@@ -42,7 +42,7 @@ public class LoginTest {
         user2.setId(UUID.randomUUID());
         this.userRepository.users.add(user2);
 
-        Login usecase = new Login(userRepository);
+        var usecase = new Login(userRepository);
         var input = new LoginInput("email1@email.com", "password");
         var output = usecase.call(input);
 
