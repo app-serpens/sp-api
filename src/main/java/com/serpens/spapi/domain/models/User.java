@@ -15,6 +15,8 @@ import java.util.List;
 @ToString
 @Builder
 @Table(name = "users")
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class User extends BaseModel implements UserDetails {
     @Column(name = "password")
     private String password;
